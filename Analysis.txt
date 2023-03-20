@@ -1,0 +1,33 @@
+James Lawrance CST211 Lab 8 Analysis
+------------------------------------
+
+1. Timing output for Insertions
+
+Array Fill Complete -- inserted 71296 strings in 0.00283921 seconds
+List Fill Complete -- inserted 71296 strings in 0.00759036 seconds
+Queue Fill Complete -- inserted 71296 strings in 0.00389712 seconds
+Tree Fill Complete -- inserted 71296 strings in 0.753435 seconds
+Hashmap Fill Complete -- inserted 71296 strings in 0.106131 seconds
+
+2. Timing output for Searches
+
+Array Search Complete -- found unquenched. in 0.000774763 seconds
+List Search Complete -- found unquenched. in 0.00292496 seconds
+Queue Search Complete -- found unquenched. in 0.00599305 seconds
+BST Search Complete -- found unquenched. in 0.00827568 seconds
+Hashmap Search Complete -- found unquenched. in 0.0171691 seconds
+
+3. Observations
+
+Below is a comparison of calculated speeds for insertions/searches for each data structure, as observed in my lab (from fastest to slowest):
+
+Insertions: Array < Queue < List < Hashmap < BST
+Searches: Array < List < Queue < BST < Hashmap
+
+Array holds the fastest performance for both insertion and search. The time complexity for insertion and search on an Array is 0(n) and 0(n), respectively (we will assume average case scenario unless otherwise specified).
+
+Queue has the 2nd fastest Insertion and 3rd fastest Search, while List has the 3rd fastest insertion and 2nd fastest search. The time complexity for insertion and search, on a Queue and on a Doubly-Linked List, is 0(1) and 0(n) respectively for a Queue, and 0(1) and 0(n) respectively for a Doubly-Linked List. It makes sense, then, why the speeds for Queue and List were around the same for both insertion and search.
+
+Hashmap and BST had the slowest performances. The time complexity for insertion and search, on a Hashmap and on a BST, is 0(1) and 0(1) respectively for a Hashmap, and 0(log(n)) and 0(log(n)) for a BST. According to this, it would be expected that both would perform much better than they did. This may have to do with the way my timings were set up.
+
+The last two labs have shown me how the speed of search algorithms and operations on data structures can be increased by many orders of magnitude by making efficient design choices. 
